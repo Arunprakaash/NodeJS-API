@@ -14,12 +14,13 @@ client.connect();
 
 
 app.get('/', (req, res) => {
-    client.query(`Select * from branches limit 100`, (err, result) => {
+    /*client.query(`Select * from branches limit 100`, (err, result) => {
         if (!err) {
             res.send(result.rows);
         }
     });
-    client.end;
+    client.end;*/
+    res.send("hrllo");
 })
 
 app.get('/api/branch', (req, res) => {
