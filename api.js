@@ -2,11 +2,10 @@ const client = require('./connection.js')
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-let port = process.env.PORT || 3000
+let port_no = process.env.PORT || 3000
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.listen(port, () => {
-    console.log("Sever is now listening at port 3000");
+app.listen(port_no, () => {
+    console.log("Sever is now listening at port "+port_no);
 })
 
 client.connect();
