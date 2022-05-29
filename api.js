@@ -5,12 +5,11 @@ const app = express();
 let port = process.env.PORT || 3000
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.listen(port, () => {
     console.log("Sever is now listening at port 3000");
 })
 
-client.connect();
+//client.connect();
 
 
 app.get('/', (req, res) => {
