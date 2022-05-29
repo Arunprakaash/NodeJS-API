@@ -20,7 +20,7 @@ app.get('/api/branch', (req, res) => {
     var limit = req.query.limit;
     var offset = req.query.offset;
     console.log(query, limit, offset);
-    client.query(`Select * from branches where branch ilike '${query}%' limit ${limit} offset ${offset}`, (err, result) => {
+    client.query(`Select * from bank_branches where branch ilike '${query}%' limit ${limit} offset ${offset}`, (err, result) => {
         if (!err) {
             res.send(result.rows);
         }
@@ -36,7 +36,7 @@ app.get('/api/search', (req, res) => {
     var limit = req.query.limit;
     var offset = req.query.offset;
     console.log(query, limit, offset);
-    client.query(`Select * from branches where branch ilike '${query}%' or ifsc ilike '${query}%' or address ilike '${query}%' or city ilike '${query}%' or district ilike '${query}%' or state ilike '${query}%' or bank_name ilike '${query}%' limit ${limit} offset ${offset}`, (err, result) => {
+    client.query(`Select * from bank_branches where branch ilike '${query}%' or ifsc ilike '${query}%' or address ilike '${query}%' or city ilike '${query}%' or district ilike '${query}%' or state ilike '${query}%' or bank_name ilike '${query}%' limit ${limit} offset ${offset}`, (err, result) => {
         if (!err) {
             res.send(result.rows);
 
