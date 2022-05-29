@@ -1,6 +1,5 @@
 const client = require('./connection.js')
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
 let port_no = process.env.PORT || 3000
 
@@ -12,13 +11,8 @@ client.connect();
 
 
 app.get('/', (req, res) => {
-    /*client.query(`Select * from branches limit 100`, (err, result) => {
-        if (!err) {
-            res.send(result.rows);
-        }
-    });
-    client.end;*/
-    res.send("hrllo");
+    
+    res.send("sample");
 })
 
 app.get('/api/branch', (req, res) => {
