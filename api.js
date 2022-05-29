@@ -8,7 +8,7 @@ app.listen(port_no, () => {
     console.log("Sever is now listening at port "+port_no);
 })
 
-//client.connect();
+client.connect();
 
 
 app.get('/', (req, res) => {
